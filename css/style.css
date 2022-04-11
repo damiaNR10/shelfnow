@@ -201,7 +201,7 @@ textarea {
 }
 
 .contact__submit {
-  width: 160px;
+  width: 100%;
   height: 50px;
   background: #ED4C5C;
   border: 1.5px solid #ED4C5C;
@@ -214,6 +214,12 @@ textarea {
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__submit {
+    width: 160px;
+  }
 }
 
 .contact__submit:hover {
