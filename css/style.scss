@@ -1,0 +1,221 @@
+//Font family
+$fontLato: 'Lato', sans-serif;
+
+//Font size
+@mixin fontSize14px {
+    font-size: 14px;
+}
+
+@mixin fontSize16px {
+    font-size: 16px;
+}
+
+@mixin fontSize36px {
+    font-size: 28px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 36px;
+    }
+}
+
+//Heading 
+@mixin heading {
+    text-align: center;
+    font-weight: 600;
+    line-height: 43px;
+    @include fontSize36px;
+}
+
+//Colors
+$colorBlack: #000000;
+$colorBlue: #132743;
+$colorGray: #333333;
+$colorOrange: #EE3D1B;
+$colorPink: #D52047;
+$colorPinkLight: #ED4C5C;
+$colorWhite: #FFFFFF;
+
+//Breakpoints
+$desktop: 1366px;
+$tablet: 768px;
+$mobile: 320px;
+
+//Normalize
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: $fontLato;
+    margin: 0;
+    color: $colorBlack;
+    @include fontSize14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    font-family: $fontLato;
+    background: none;
+    padding: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    @media screen and (min-width: $tablet) {
+        width: 730px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 1110px;
+    }
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+}
+
+h1,  h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input {
+    border: none;
+    font-family: $fontLato;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    font-family: $fontLato;
+    background: none;
+    -moz-appearance:none; 
+    -webkit-appearance:none; 
+    appearance:none;
+    color: rgba($colorBlue, 0.5);
+
+    option {
+        color: $colorBlack;
+    }
+}
+
+textarea {
+    border: none;
+    font-family: $fontLato;
+}
+
+//Form
+.contact {
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+        padding: 114px 0 78px 0;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+
+        @media screen and (min-width: $tablet) {
+            // grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 125px;
+            padding-left: 11px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        @include heading;
+        text-align: left;
+
+        @media screen and (min-width: $tablet) {
+            height: 99px;
+        }
+    }
+
+    &__input {
+        border: 1px solid $colorGray;
+        box-sizing: border-box;
+        border-radius: 6px;
+        line-height: 19px;
+        @include fontSize16px;
+        width: 100%;
+        padding: 20px 31px 19px 31px;
+
+        &:invalid {
+            border-color: $colorOrange;
+        }
+
+        &::placeholder {
+            color: rgba($colorBlue, 0.5);
+            line-height: 19px;
+            @include fontSize16px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 24px;
+        width: 100%;
+
+        @media screen and (min-width: $desktop) {
+            width: calc(50% - 15px);
+        }
+
+        &:last-of-type {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    &__submit {
+        width: 160px;
+        height: 50px;
+        background: $colorPinkLight;
+        border: 1.5px solid $colorPinkLight;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: $colorWhite;
+        text-transform: uppercase;
+        line-height: 17px;
+        transition: 0.3s ease all;
+        margin-left: auto;
+
+        &:hover {
+            background-color: $colorBlack;
+            border-color: $colorBlack;
+            cursor: pointer;
+        }
+    }
+}

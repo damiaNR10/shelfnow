@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Shelfnow</title>
+</head>
+<body>
+    <section id="contact" class="contact">
+        <form method="post" action="#">
+            <div class="container contact__box">
+                <div class="contact__description">
+                    <h2 class="contact__heading">Register</h2>
+                </div>
+                <div class="contact__form">
+                    <label class="contact__label">
+                        <input type="text" class="contact__input contact__input--name" placeholder="Name" name="contact_name" />
+                    </label>
+                    <label class="contact__label">
+                        <input type="email" class="contact__input contact__input--email" placeholder="Email" name="contact_email" />
+                    </label>
+                    <label class="contact__label">
+                        <input type="password" class="contact__input contact__input--password" placeholder="Password" name="contact_password" />
+                    </label>
+                    <label class="contact__label">
+                        <input type="date" class="contact__input contact__input--birthday" placeholder="17.02.2022" name="contact_birthday" />
+                    </label>
+                    <input type="submit" class="contact__submit" value="Register" />
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+<script src="js/validation.js"></script>
+</html>
